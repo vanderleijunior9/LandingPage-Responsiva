@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.topnav {
+    background-color: #333;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+ /* Add a color to the active/current link */
+ .active {
+    background-color: #04AA6D;
+    color: white;
+    display: flex;
+    justify-self: start;
+  }
+.topnav a{
+    display: flex;
+    justify-content: center;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+ 
+.container {
+    margin-top: 2vh;
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    justify-content: center;
+    background-size: auto 100;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 35px;
+    color: aliceblue;
+    cursor: pointer;
+    flex: 0.1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    color: rgb(44, 2, 2);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 1;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media screen (max-width: 480px){
+    .container{
+        width: 100vh;
+    }
+    .panel:nth-last-of-type(4),
+    .panel:nth-last-of-type(5)
+}
